@@ -35,4 +35,14 @@ switch (DayName) {
 
 console.log("The day is: "+ DayName);
 
+for (let i = 1;  i <= 5; i++) {
+    console.log(i);
+
+    for (let j = 1; j <=5; j++){
+        console.log("Inner Loop" +j);
+        
+    }
+    
+}
+
 
