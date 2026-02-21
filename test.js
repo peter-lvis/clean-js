@@ -38,11 +38,16 @@ console.log("The day is: "+ DayName);
 for (let i = 1;  i <= 5; i++) {
     console.log(i);
 
-    for (let j = 1; j <=5; j++){
+    for (let j = 1; j <=3; j++){
         console.log("Inner Loop" +j);
         
     }
     
 }
 
+let i = 0;
 
+while (i<=10){
+    console.log(i);
+    i++;
+}
