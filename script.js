@@ -208,5 +208,119 @@ person.gae = 21
 console.log(persOn);
 
 
-// JAVASCIPT PBJECT METHODS
+// JAVASCIPT OBJECT METHODS
 // IS AN OBJECT property that contains a function definition
+ const Human = {
+    Color: "Black",
+    Height: "6'2",
+    age: 21,
+
+   Props: function Props() {
+        console.log("He is Alive");
+    }
+ }
+
+ Human.Props();
+ // We can also use the annonymous function
+  const HumaN = {
+    Color: "Black",
+    Height: "6'2",
+    age: 21,
+
+   Props: function() {
+        console.log("He is Alive But Anonymous");
+    }
+ }
+
+ HumaN.Props();
+
+ 
+//We can also declare the function outside the object and assign it to an object as a method
+// To display the output in the function after using "human" we will add "human() thst is HUMan.human() 
+//In oder for our message to be displayed
+//The property name or key name is "human"
+// If i want to dsiplay the HuMan object i can simply use Console.log(HuMan);
+ const HuMan = {
+    Color: "Black",
+    Height: "6'2",
+    age: 21,
+ }
+
+function Prop() {
+    console.log("He is Alive, but declared outside of an object");
+    }
+HuMan.human = Prop;
+HuMan.human()
+
+// Another way we can declare a Javascript object method
+
+const human = {
+    color: "Black",
+    Height: "6'2",
+    age: 21,
+    prop(){
+        console.log("UST4ckDev is a human who's going to be the best developer in the world");
+        
+    }
+}
+
+human.prop();
+
+// JAVASCRIPT "this" keyword
+//To access the other properties of an object within a method of the same object, we can use "this" keyword
+// When we use the keyword in a method it refers to the same object
+const humAn = {
+    color: "Black Hair",
+    Height: "6'2",
+    age: 21,
+    Appearance: function(){
+        console.log("He's an Handsome young man with a " + this.color);
+        
+    }
+}
+humAn.Appearance();
+
+//How can i get color and height together without thats getting a method that contains color and height
+
+const hUman = {
+    color: "Black Hair",
+    Height: "6'2",
+    age: 21,
+    getFullAppearnce: function(){
+        return this.color + " " + this.Height + "" + this.age }
+}
+console.log(hUman.getFullAppearnce());
+
+// If we use "this" keyword alone, or inside a function. Then it will refer tomthe global object, that is "window" object
+console.log(this);
+
+//Or wheen we use "this" keyword in the "Event" then it will refer to the elemnt that receive the evenr.
+//"this" keyword is not a variable so we cannot chnage the value of "this"
+// So this is all about JAVASCRIPT METHOD
+
+// Javascript Constructor Function
+// In javascript constructor function is used to create an object
+//Constructor Function is similar as a regualr function but it good practice to capitalize the fisrt later of your constructor function
+//A Constuctor function should be called only with the new operator
+//We can use the new operator to create an object from a constructor function
+
+function Person(first, last){
+    this.FirstName = first,
+    this.LastNme = last
+}
+
+const person1 = new Person("USt4ckDev", "Curry");
+const person2 = new Person("Draco", "Malfoy");
+
+console.log(person1);
+console.log(person2);
+// How to add properties and method in an object
+person1.age = 52;
+console.log(person1);
+//How to add one method in the object (person2)
+person2.greet = function() {
+    console.log("Hi USt4ckDev"); 
+}
+person2.greet();
+
+//JAVASCRIPT OBJECT PROTOTYPE
