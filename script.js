@@ -210,7 +210,8 @@ console.log(persOn);
 
 // JAVASCIPT OBJECT METHODS
 // IS AN OBJECT property that contains a function definition
- const Human = {
+ 
+const Human = {
     Color: "Black",
     Height: "6'2",
     age: 21,
@@ -324,3 +325,50 @@ person2.greet = function() {
 person2.greet();
 
 //JAVASCRIPT OBJECT PROTOTYPE
+//Every function has it own property called prototype
+// A prototype itself is also another object. So, the prorotype has it own prototype. This creates a prototype chain.
+ // PROTOTYPE INHERITANCE: We can usw the prorotype to add properties and methods to a constructor function
+ //And objects inherit the properties and methods from a prototype
+//Method is a function declaration
+ function You (FName, LName){
+    this.firstName =FName,
+    this.lastName = LName
+ }
+
+ You.prototype.gender = "Male";
+ You.prototype.getFullName = function() {
+    return this.firstName + " " + this.lastName;
+} 
+ const you1 = new You("US4ckDev", "Curry");
+ const you2 = new You("Ofodili", "Peter");
+
+ console.log(you1);
+ console.log(you2.getFullName());
+
+ // If a prototype value is chnged, then all the new objects will have the changed property value
+ //All the a created object will have the previous value
+ // End of javascript Objet Prototype
+
+
+ //Object destructuring in javascript is a feature that allows you to ettract the properties of an object into variables
+ // This can be usefuill for assigning the properties of an object to variables in a single statement
+ // When you assign a property that does not exist in an object to a variable using the "OBJECT DESTRUTCURING" The variable is to be Undefined 
+ const Me = {
+    First: "Tall",
+    Last: "Short"
+ }
+
+ let {First, Last, agee = 21} = Me;
+ console.log(agee);
+ 
+ //OBJECT LITERAL EXTENSION IN ES6
+ let first = "Height";
+ let last = "Weight";
+
+ const me = {
+        first,
+        last
+ }
+
+ console.log(me);
+ 
