@@ -1,5 +1,5 @@
 // Javascript Classes 
-// Classes are on of the features introduced in the ES6 version of Javascript
+// Classes are one of the features introduced in the ES6 version of Javascript
  // JS CLASS is a template for creating object
  //  You should always add a method with a name "constructor" within the class
  // "constuctor()" is used to innitialize the value or property of an object
